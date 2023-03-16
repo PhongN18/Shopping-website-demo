@@ -30,3 +30,7 @@ html {
     display: flex;
     flex-wrap: wrap;
 }
+
+.font-bold {
+    font-weight: 500;
+}
