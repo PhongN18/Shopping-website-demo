@@ -5,7 +5,7 @@
 /* Header */
 .header {
     height: 120px;
-    background: linear-gradient(0,#f63,#f53d2d);
+    background: var(--primary-color);
 }
 
 .header__nav {
@@ -81,7 +81,7 @@
     left: 0;
     top: 160%;
     border-radius: 2px;
-    animation: fadeIn ease 0.5s;
+    animation: fadeIn ease 0.3s;
 }
 
 .header__qr::before {
@@ -103,6 +103,7 @@
     margin: auto;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
     padding: 0 12px;
 }
 
@@ -110,9 +111,151 @@
     height: 2.4rem;
 }
 
-.header__qr-acc-num {
+.header__qr-acc-num,
+.header__qr-text {
     color: var(--text-color);
     font-size: 1.2rem;
+}
+
+.header__qr-text {
+    text-align: center;
+    line-height: 1.6rem;
+    margin: 4px 0;
+}
+
+/* Header notification */
+.header__nav-item--notify:hover .header__noti {
+    display: block;
+}
+
+.header__noti::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border: solid;
+    border-width: 20px 24px;
+    border-color: transparent transparent #fff transparent;
+    position: absolute;
+    top: -28px;
+    right: 0;
+}
+
+.header__noti:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 90px;
+    height: 20px;
+    right: -1px;
+    top: -14px;
+}
+
+.header__noti {
+    display: none;
+    position: absolute;
+    top: 160%;
+    right: 0;
+    width: 404px;
+    background-color: var(--white-color);
+    border: solid 1px #d3d3d3;
+    cursor: default;
+    transform-origin: calc(100% - 32px) top;
+    animation: notiDisplay ease 0.2s;
+    will-change: opacity, transform;
+    /* inform cho trình duyệt biết sắp dùng animation thay đổi gì để tối ưu hơn */
+}
+
+@keyframes notiDisplay {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header__noti-header{
+    height: 40px;
+}
+
+.header__noti-header h3 {
+    color: #999;
+    margin:  0 0 0 12px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 40px;
+}
+
+.header__noti-list {
+    padding-left: 0;
+}
+
+.header__noti-item {
+    background-color: rgba(0, 51, 255, 0.1);
+}
+
+.header__noti-item:hover {
+    background-color: #6b81d61a;
+}
+
+
+.header__noti-item--viewed {
+
+}
+
+.header__noti-link {
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+
+}
+
+.header__noti-img {
+    width: 48px;
+    object-fit: contain; 
+    /* Giữ nguyên tỉ lệ ảnh, ko bị ảnh hưởng bới flex */
+    border-radius: 4px;
+}
+
+.header__noti-info {
+    margin-left: 12px;
+}
+
+.header__noti-name,
+.header__noti-des {
+    display: block;
+}
+
+.header__noti-name {
+    font-size: 1.4rem;
+    color: var(--black-color);
+    font-weight: 400;
+    line-height: 1.8rem;
+}
+
+.header__noti-des {
+    margin-top: 4px;
+    font-size: 1.2rem;
+    color: #888;
+}
+
+.header__noti-footer {
+    text-align: center;
+}
+
+.header__noti-footer-link {
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 8px;
+    font-weight: 400;
+    width: 100%;
+}
+
+.header__noti-footer-link:hover {
+    font-weight: 500;
 }
 
 .container {
