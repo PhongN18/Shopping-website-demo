@@ -34,3 +34,15 @@ html {
 .font-bold {
     font-weight: 500;
 }
+
+
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

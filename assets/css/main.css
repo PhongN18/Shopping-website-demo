@@ -16,6 +16,7 @@
 .header__nav-list {
     list-style-type: none;
     padding-left: 0;
+    margin-top: 0.8rem;
 }
 
 .header__nav-item {
@@ -35,14 +36,26 @@
 }
 
 .header__nav-item:hover, 
-.header__nav-item-link:hover {
-    opacity: 0.8;
+.header__nav-item-link:hover,
+.header__nav-icon-link:hover {
+    color: rgba(255, 255, 255, 0.8);
     cursor: pointer;
 }
 
-.header__nav-icon {
+.header__nav-icon-link {
     color: var(--white-color);
     text-decoration: none;
+    padding: 0 4px;
+}
+
+.header__nav-icon {
+    font-size: 1.6rem;
+}
+
+.header__nav-item--no-pointer:hover {
+    cursor: default;
+    opacity: 1;
+    color: var(--white-color);
 }
 
 .header__nav--separate::after {
@@ -53,6 +66,53 @@
     top: 0;
     height: 16px;
     border-left: solid 1px #fff;
+}
+
+/* Header QR code */
+.header__nav-item:hover .header__qr {
+    display: block;
+}
+
+.header__qr {
+    display: none;
+    background-color: var(--white-color);
+    width: 180px;
+    position: absolute;
+    left: 0;
+    top: 160%;
+    border-radius: 2px;
+    animation: fadeIn ease 0.5s;
+}
+
+.header__qr::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: -16px;
+}
+
+.header__qr-code {
+    width: 100%;
+    padding: 16px 16px 0;
+}
+
+.header__qr-account {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 12px;
+}
+
+.header__qr-bank {
+    height: 2.4rem;
+}
+
+.header__qr-acc-num {
+    color: var(--text-color);
+    font-size: 1.2rem;
 }
 
 .container {
