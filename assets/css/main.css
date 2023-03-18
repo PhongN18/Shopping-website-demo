@@ -122,11 +122,29 @@
     text-align: center;
     line-height: 1.6rem;
     margin: 4px 0;
+    color: var(--primary-color);
+    font-weight: 800;
+    font-size: 1.2rem;
 }
 
 /* Header notification */
 .header__nav-item--notify:hover .header__noti {
     display: block;
+}
+.header__noti {
+    display: none;
+    position: absolute;
+    top: 160%;
+    right: 0;
+    width: 404px;
+    background-color: var(--white-color);
+    border: solid 1px #d3d3d3;
+    cursor: default;
+    transform-origin: calc(100% - 32px) top;
+    animation: growFadeIn ease 0.2s;
+    will-change: opacity, transform;
+    z-index: 1;
+    /* inform cho trình duyệt biết sắp dùng animation thay đổi gì để tối ưu hơn */
 }
 
 .header__noti::before {
@@ -151,20 +169,6 @@
     top: -14px;
 }
 
-.header__noti {
-    display: none;
-    position: absolute;
-    top: 160%;
-    right: 0;
-    width: 404px;
-    background-color: var(--white-color);
-    border: solid 1px #d3d3d3;
-    cursor: default;
-    transform-origin: calc(100% - 32px) top;
-    animation: growFadeIn ease 0.2s;
-    will-change: opacity, transform;
-    /* inform cho trình duyệt biết sắp dùng animation thay đổi gì để tối ưu hơn */
-}
 
 .header__noti-header{
     height: 40px;
@@ -274,15 +278,72 @@
     align-items: center;
 }
 
+.header__search-input-wrap {
+    flex: 1;
+    height: 100%;
+    position: relative;
+}
+
 .header__search-input {
     height: 100%;
-    flex: 1;
     font-size: 1.4rem;
     color: var(--text-color);
     border: none;
     outline: none;
     padding: 0 16px;
     border-radius: 3px;
+    width: 100%;
+}
+
+/* Search history */
+
+/* a ~ b -> select tất cả thẻ b nằm phía sau thẻ a */
+/* .a ~ .b -> select tất cả thẻ có class b nằm phía sau thẻ có class a */
+.header__search-input:focus ~
+ .header__search-history {
+    display: block
+}
+
+.header__search-history {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    width: calc(100% - 16px);
+    background-color: var(--white-color);
+    border-radius: 2px;
+    box-shadow: 0 1px 3px #999;
+    overflow: hidden;
+    display: none;
+}
+
+.header__search-history-header {
+    margin: 8px 12px;
+    color: #999;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 20px;
+}
+
+.header__search-history-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.header__search-history-item {
+    height: 36px;
+    padding-left: 12px; 
+}
+
+.header__search-history-item a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    line-height: 36px;
+}
+
+.header__search-history-item:hover {
+    background-color: var(--primary-hover-01);
 }
 
 .header__search-select {
