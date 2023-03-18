@@ -1,10 +1,16 @@
 :root {
-    /* --primary-color: rgb(0, 51, 255); */
-    --primary-color: #0033ff;
+    /* --primary-color: rgb(0, 20, 137); */
+    --primary-color: #001489;
+    --primary-hover-08: rgba(0, 20, 137, 0.8);
+    --primary-hover-01: rgba(0, 20, 137, 0.1);
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
     --border-color: #dbdbdb;
+
+    --header-height: 120px;
+    --navbar-height: 36px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
 }
 
 * {
@@ -65,7 +71,7 @@ html {
 }
 
 .btn.btn--primary:hover {
-    background-color: rgba(0, 51, 255, 0.8);
+    background-color: var(--primary-hover-08);
 }
 
 .btn.btn--size-s {
@@ -90,15 +96,15 @@ html {
     bottom: 0;
     left: 0;
     display: flex;
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
 .modal__overlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #000;
-    opacity: 0.4;
+    background-color: rgba(0, 0, 0, .4);
+    animation: fadeIn ease 0.3s;
 }
 
 .modal__body {
@@ -106,6 +112,7 @@ html {
     margin: auto;
     z-index: 1;
     border-radius: 4px;
+    animation: growFadeIn ease 0.3s;
 }
 
 
@@ -116,5 +123,16 @@ html {
     }
     to {
         opacity: 1;
+    }
+}
+
+@keyframes growFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }
