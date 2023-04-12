@@ -732,7 +732,7 @@
 
 /* Container */
 .container {
-    background-color: rgba(245, 245, 245, 0.6);
+    background-color: rgba(241, 241, 241, 0.6);
 }
 
 .app-container {
@@ -805,7 +805,7 @@
 
 /* Home sort + filter bar */
 .home-filter {
-    background-color: rgba(237, 237, 237, 0.9);
+    background-color: rgb(227, 227, 227);
     display: flex;
     align-items: center;
     padding: 12px 22px;
@@ -873,6 +873,92 @@
 .home-filter__page-btn--disabled .home-filter__page-icon {
     color: #ccc;
 }
+
+/* Home products */
+.home-products__card {
+    background-color: var(--white-color);
+    margin-top: 10px;
+}
+
+.home-products__img {
+    padding-top: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.home-products__title {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.8rem;
+    margin: 10px;
+
+    /* Thay phần tên dài thừa bằng ... */
+    overflow: hidden;
+    height: 3.6rem;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    /* Chỉ dùng được khi rút còn 1 line */
+    /* white-space: nowrap;
+    text-overflow: ellipsis; */
+
+}
+
+.home-products__price {
+
+}
+
+.home-products__old-price {
+
+}
+
+.home-products__new-price {
+
+}
+
+.home-products__action {
+
+}
+
+.home-products__like {
+
+}
+
+.home-products__rate {
+
+}
+
+.home-products__info {
+
+}
+
+.home-products__brand {
+
+}
+
+.home-products__address {
+
+}
+
+.home-products__favorite {
+
+}
+
+.home-products__sale {
+
+}
+
+.home-products__sale-percent {
+
+}
+
+.home-products__sale-label {
+
+}
+
 
 /* Footer */
 .footer {
