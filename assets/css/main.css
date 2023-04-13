@@ -808,7 +808,12 @@
     color: var(--primary-color);
 }
 
+
 /* Home sort + filter bar */
+.select-filter-mobile {
+    display: none;
+}
+
 .home-filter {
     background-color: rgb(227, 227, 227);
     display: flex;

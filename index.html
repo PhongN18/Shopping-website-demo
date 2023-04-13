@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="./assets/css/base.css">
         <link rel="stylesheet" href="./assets/css/main.css">
+        <link rel="stylesheet" href="./assets/css/responsive.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -21,7 +22,7 @@
                     <!-- Navigation bar -->
                     <nav class="header__nav">
                         <ul class="header__nav-list">
-                            <li class="header__nav-item header__nav--separate">
+                            <li class="header__nav-item nav__mobile-hidden header__nav--separate">
                                 Tải ứng dụng của Phong Nguyễn
                                 <div class="header__qr">
                                     <img src="./assets/img/qr_code.JPG" alt="" class="header__qr-code">
@@ -51,7 +52,7 @@
                         </ul>
     
                         <ul class="header__nav-list">
-                            <li class="header__nav-item header__nav-item--notify">
+                            <li class="header__nav-item nav__mobile-hidden header__nav-item--notify">
                                 <a href="" class="header__nav-item-link">
                                     <i class="header__nav-icon fa-solid fa-bell"></i>
                                     Thông báo
@@ -126,7 +127,7 @@
                                 </div>
 
                             </li>
-                            <li class="header__nav-item">
+                            <li class="header__nav-item nav__mobile-hidden">
                                 <a href="" class="header__nav-item-link">
                                     <i class="header__nav-icon fa-solid fa-circle-question"></i>
                                     Hỗ trợ
@@ -211,6 +212,7 @@
 
                         <div class="header__cart">
                             <div class="header__cart-wrap">
+                                <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
                                 <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
                                 <span class="header__cart-num">9</span>
                                 <!-- If no item: add cart-list--no-item -->
@@ -413,6 +415,19 @@
     
                         <div class="grid__col-10">
                             <div class="home-filter">
+                                <div class="select-input select-filter-mobile">
+                                    <span class="select-input__label">Phổ biến</span>
+                                    <i class="select-input__icon fa-solid fa-caret-down"></i>
+                                    <ul class="select-input__options">
+                                        <li class="select-input__item">
+                                            <a href="#" class="select-input__link">Mới nhất</a>
+                                        </li>
+                                        <li class="select-input__item">
+                                            <a href="#" class="select-input__link">Bán chạy</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
                                 <span class="home-filter__label">Sắp xếp theo</span>
                                 <button class="home-filter__btn btn btn--primary">Phổ biến</button>
                                 <button class="home-filter__btn btn">Mới nhất</button>
@@ -432,7 +447,7 @@
                                 </div>
                                 <div class="home-filter__pages">
                                     <span class="home-filter__page-cur">1</span>
-                                    /14
+                                    /18
                                     <div class="home-filter__page-ctrl">
                                         <a href="#" class="home-filter__page-btn home-filter__page-btn--disabled">
                                             <i class="home-filter__page-icon fa-solid fa-caret-left"></i>

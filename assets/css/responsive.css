@@ -1,0 +1,122 @@
+@media (min-width: 968.01px) {
+    .header__cart-wrap .header__search-btn-icon {
+        display: none;
+    }
+}
+
+@media (max-width: 1240px) and (min-width: 740px) {
+    .app-container .grid__col-2-4 {
+        width: 25%;
+    }
+
+    .footer .grid__col-2-4 {
+        width: calc(100% / 3);
+    }
+}
+
+@media(max-width: 968px) {
+    .app-container .grid__col-2 {
+        display: none;
+    }
+
+    .app-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .home-filter__label, .home-filter__pages {
+        display: none;
+    }
+
+    .footer .grid {
+        width: 70%;
+    }
+
+    .header__search {
+        display: none;
+    }
+
+    .header__cart-wrap .header__search-btn-icon {
+        font-size: 2.4rem;
+        margin-right: 16px;
+    }
+
+    .header-with-search {
+        justify-content: space-around;
+    }
+
+    .home-pagination .pagination-item__link {
+        font-size: 1.4rem;
+        --height: 24px;
+        min-width: 32px;
+    }
+
+}
+
+@media (max-width: 739.99px) {
+    .app-container .grid__col-2-4 {
+        width: 50%;
+    }
+
+    .footer .grid__col-2-4 {
+        width: 50%;
+    }
+}
+
+@media (max-width: 668px) {
+    .select-filter-mobile {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 16px;
+    }
+
+    .home-filter .select-input {
+        min-width: 40%;
+    }
+
+    .home-filter .select-input__label {
+        font-size: 1.2rem;
+    }
+
+    .home-filter__btn {
+        display: none;
+    }
+
+    .nav__mobile-hidden {
+        display: none;
+    }
+
+    .header__cart-wrap i {
+        font-size: 1.6rem;
+    }
+
+    .header__cart-wrap .header__search-btn-icon {
+        font-size:  1.6rem;
+    }
+
+    .header__cart-num {
+        font-size: 1rem;
+        line-height: 1rem;
+        padding: 1px 5px;
+    }
+
+    .header__nav {
+        margin: 0 12px;
+    }
+
+    .home-products__sale-percent, .home-products__sale-label {
+        font-size: 1rem;
+        line-height: 1rem;
+        text-align: center;
+    }
+
+    .home-products__sale-percent {
+        position: absolute;
+        top: 8px;
+    }
+
+    .home-products__sale-label {
+        position: absolute;
+        top: 24px;
+    }
+}
